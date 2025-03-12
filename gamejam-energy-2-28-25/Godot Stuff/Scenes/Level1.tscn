@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3g7xp0ntdm6t"]
+
+[ext_resource type="Texture2D" uid="uid://baobyb0trecdu" path="res://PNG's/Background-PCB.png" id="1_7covr"]
+[ext_resource type="PackedScene" uid="uid://clrm1480gs3gv" path="res://Scenes/battery_cat.tscn" id="2_6kbwl"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_re2n2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jep5j"]
+size = Vector2(2043, 54)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1124, 760)
+scale = Vector2(2.25513, 1.73923)
+texture = ExtResource("1_7covr")
+
+[node name="BatteryCat" parent="." instance=ExtResource("2_6kbwl")]
+position = Vector2(217, 328)
+
+[node name="Area2D" type="Area2D" parent="."]
+material = SubResource("CanvasItemMaterial_re2n2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(999, 529)
+shape = SubResource("RectangleShape2D_jep5j")

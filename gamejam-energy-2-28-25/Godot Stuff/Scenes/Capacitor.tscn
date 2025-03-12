@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm8l4u1e4cyjs"]
+
+[ext_resource type="Texture2D" uid="uid://b83lt6om3qfci" path="res://PNG's/Capacitors.png" id="1_r5d31"]
+
+[sub_resource type="GDScript" id="GDScript_mjg58"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Capacitors" type="Sprite2D" parent="."]
+position = Vector2(10, 21)
+texture = ExtResource("1_r5d31")
+script = SubResource("GDScript_mjg58")

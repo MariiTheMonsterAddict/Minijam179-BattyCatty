@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://clrm1480gs3gv"]
+
+[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="1_enrbc"]
+[ext_resource type="Texture2D" uid="uid://bjd6qsbdjjet0" path="res://PNG's/Battery-Cat.png" id="2_2ko6t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r06cr"]
+size = Vector2(455, 362)
+
+[node name="BatteryCat" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_enrbc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-11, -11)
+shape = SubResource("RectangleShape2D_r06cr")
+debug_color = Color(0.218043, 0.510542, 1, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_2ko6t")
